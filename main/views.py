@@ -3,16 +3,16 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(response):
-    return HttpResponse("<h1>First View</h1>")
+    return render(response, "main/base.html", {})
 
 def home(response):
-    return HttpResponse("<h1>Home Page</h1>")
+    return render(response, "main/home.html", {})
 
 def reportit(response):
-    return HttpResponse("<h1>Report It Page</h1>")
+    return render(response, "main/reportit.html", {})
 
 def resources(response):
-    return HttpResponse("<h1>Resources Page</h1>")
+    return render(response, "main/resources.html", {})
 
 def help(response):
-    return HttpResponse("<h1>Help Page</h1>")
+    return render(response, "main/help.html", {})
